@@ -41,3 +41,22 @@ python3 ~/.claude/skills/skills-json-auditor/scripts/audit_skills.py \
 - High-risk deleted: 5
 - High-risk downgraded to low: 3
 - **Final: 2,185 entries**
+
+## Audit results (2026-04-09)
+
+**Target:** `minminminminchew/happycapy-skills-data` branch `add-500-skills-v2-2026-04-08`
+
+| Metric | Count |
+|--------|-------|
+| Input entries | 2,685 |
+| True 404 removed | 1 (`plotly`) |
+| Feishu entries removed (user decision) | 9 |
+| High-risk offensive tools removed | 3 |
+| High-risk downgraded to low | 25 |
+| **Final count** | **2,672** |
+
+**Script bugs identified:**
+- Non-ASCII URL paths (Chinese chars) cause false 404 — needs `urllib.parse.quote()`
+- Keyword-only risk detection too broad — false-flagged 3 legitimate forensic tools
+
+See [AUDIT_SUMMARY_2026-04-09.md](./AUDIT_SUMMARY_2026-04-09.md) for full details.
