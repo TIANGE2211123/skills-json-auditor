@@ -60,3 +60,24 @@ python3 ~/.claude/skills/skills-json-auditor/scripts/audit_skills.py \
 - Keyword-only risk detection too broad — false-flagged 3 legitimate forensic tools
 
 See [AUDIT_SUMMARY_2026-04-09.md](./AUDIT_SUMMARY_2026-04-09.md) for full details.
+
+
+## Audit results (2026-04-15)
+
+**Branch:** `add-500-skills-v3-2026-04-14`
+
+| Metric | Count |
+|--------|-------|
+| Input entries | 3,172 |
+| Unique URLs checked | 3,171 |
+| True 404 removed | 108 |
+| High-risk entries | 0 |
+| Final count | 3,064 |
+
+**Key findings:**
+- CharlesWiltgen/Axiom accounted for 82/108 removals (repo restructured skill paths)
+- No high-risk entries found (cleaned in v2 audit)
+- 3-phase URL verification: direct check -> GitHub API re-verify -> final timeout re-check
+- All 404s confirmed via authenticated GitHub Contents API
+
+Full report: [AUDIT_SUMMARY_2026-04-15.md](./AUDIT_SUMMARY_2026-04-15.md)
