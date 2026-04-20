@@ -81,3 +81,19 @@ See [AUDIT_SUMMARY_2026-04-09.md](./AUDIT_SUMMARY_2026-04-09.md) for full detail
 - All 404s confirmed via authenticated GitHub Contents API
 
 Full report: [AUDIT_SUMMARY_2026-04-15.md](./AUDIT_SUMMARY_2026-04-15.md)
+
+
+## Audit results (2026-04-20)
+
+**Branch**: `add-500-skills-v4-2026-04-17`
+
+| Metric | Count |
+|--------|-------|
+| Input entries | 3,563 |
+| Confirmed 404 removed | 24 |
+| Chinese char URLs | 0 |
+| High-risk entries | 0 |
+| Duplicate IDs | 0 |
+| Final count | 3,539 |
+
+See [AUDIT_SUMMARY_2026-04-20.md](./AUDIT_SUMMARY_2026-04-20.md) for full details.
